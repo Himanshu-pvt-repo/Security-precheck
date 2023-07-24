@@ -2,7 +2,7 @@
 
 # based on https://gist.github.com/jokeru/e4a25bbd95080cfd00edf1fa67b06996
 # Made modifications to remove need for jq, set AWS_DEFAULT_REGION so you don't have to specify --region explicitly
-#  Add region 'human-readable' names
+#  Add region 'human-readable'
 REGIONS='us-east-1 (N. Virginia)
 us-east-2 (Ohio)
 us-west-1 (California)
