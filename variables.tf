@@ -19,12 +19,14 @@ variable "datadog_app_key" {
   description = "datadog_app_key"
   type        = string
   default     = null
+  sensitive = true
 }
 
 variable "datadog_api_key" {
   description = "datadog_api_key"
   type        = string
   default     = null
+  sensitive = true
 }
 
 variable "excluded_regions" {
