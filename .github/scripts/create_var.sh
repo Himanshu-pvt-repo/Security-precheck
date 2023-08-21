@@ -8,7 +8,7 @@ datadog_host_tags=$3
 cat << EOF > backend.tf
 datadog_api_key_name = $datadog_api_key_name
 enable_datadog_integration = $enable_datadog_integration
-datadog_host_tags=$datadog_host_tags
+datadog_host_tags=[$datadog_host_tags]
 EOF
 
 echo "Terraform Values configuration generated in terraform.tfvars"
