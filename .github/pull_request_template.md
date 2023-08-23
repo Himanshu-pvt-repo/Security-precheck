@@ -11,14 +11,16 @@
 <!-- Please describe the tests that you ran to verify your changes and list the following: -->
 
 - [ ] GitHub Actions build link(s)
+* https://example.com
+
 - [ ] Screenshots
 
 ## Checklist
 <!-- Mark the items with an "x" once they are completed. You can do this by replacing [ ] with [x]. -->
 
 - [ ] I have performed a self-review of my own code.
-- [ ] I have provided a clear and concise title for the pull request.
-- [ ] I have run `terraform fmt` to format the Terraform code.
+- [ ] The pull request title and description are clear and descriptive, and provide enough context for reviewers.
+- [ ] The Terraform code has been formatted using Terraform fmt.
 - [ ] I have assigned reviewers to this pull request.
 - [ ] I have updated the documentation (if applicable) to reflect the changes made.
 - [ ] I have added relevant comments and explanations for complex or non-obvious code sections.
