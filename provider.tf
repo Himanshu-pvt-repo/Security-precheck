@@ -10,6 +10,9 @@ terraform {
 provider "aws" {
   # The AWS region in which all resources will be created
   region = var.aws_region
+  assume_role {
+    role_arn = "arn:aws:iam::646994156872:role/test-datadog-role"
+  }
 }
 
 # Configure the Datadog provider for pipeline
