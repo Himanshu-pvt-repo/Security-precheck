@@ -10,7 +10,7 @@ cat << EOF > backend.tf
 terraform {
   backend "s3" {
     bucket = "$bucket_name"
-    key    = "$key/terraform.tfstate"
+    key    = "$key/statefile.tfstate"
     region = "$region"
     dynamodb_table = "$dynamodb_table"
     encrypt = true
