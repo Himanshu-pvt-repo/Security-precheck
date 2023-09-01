@@ -51,14 +51,14 @@ locals {
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite"
-  contents  = <<EOF
+  contents  = <<new_EOF
 provider "aws" {
   assume_role {
     role_arn = "\${local.role_arn}"
   }
   region = "\${local.region}"
 }
-REPLCE_EOF
+new_EOF
 }
 
 # Generate backend configuration for remote state
