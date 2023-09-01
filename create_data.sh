@@ -27,17 +27,14 @@ cat << EOF > terragrunt.hcl
 terraform {
   source = "git::https://git.i.mercedes-benz.com/MBUSA/ride-platform-tf-modules.git//datadog_integration/module?ref=feature/CPET-1938-refactor-dd-integration"  
 }
-
 include {
   path = find_in_parent_folders()
 }
-
 inputs = {
     datadog_api_key_name = "$datadog_api_key_name"
     enable_datadog_integration = $enable_datadog_integration
     datadog_host_tags = $datadog_host_tags
 }
-
 EOF
 
 
