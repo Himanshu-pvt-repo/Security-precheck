@@ -58,6 +58,7 @@ provider "aws" {
   }
   region = "\${local.region}"
 }
+EOF
 }
 
 # Generate backend configuration for remote state
