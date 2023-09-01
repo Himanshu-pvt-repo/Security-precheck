@@ -14,7 +14,6 @@ cd ${account_name}/${env}/datadog_integration
 
 # Generate Terraform configuration
 cat << EOF > account.hcl
-
 locals {
   account_name = "${account_name}"
   account_id = ${account_id}
@@ -25,7 +24,6 @@ locals {
 EOF
 
 cat << EOF > terragrunt.hcl
-
 terraform {
   source = "git::https://git.i.mercedes-benz.com/MBUSA/ride-platform-tf-modules.git//datadog_integration/module?ref=feature/CPET-1938-refactor-dd-integration"  
 }
@@ -44,7 +42,6 @@ EOF
 
 
 cd .. && cat << EOF > terragrunt.hcl
-
 locals {
   account_vars = read_terragrunt_config("account.hcl")
   account_name = local.account_vars.locals.account_name
@@ -82,4 +79,4 @@ remote_state {
 }
 EOF
 
-echo "Terraform backend configuration generated in account.tf"
+echo "Terraform backend configuration generated in account.tf and terragrunt.tf"
