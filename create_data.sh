@@ -38,7 +38,7 @@ inputs = {
 EOF
 
 
-cd .. && cat << REALEND > terragrunt.hcl
+cd .. && cat << EOF > terragrunt.hcl
 locals {
   account_vars = read_terragrunt_config("account.hcl")
   account_name = local.account_vars.locals.account_name
@@ -75,6 +75,6 @@ remote_state {
     if_exists = "overwrite"
   }
 }
-REALEND
+EOF
 
 echo "Terraform backend configuration generated in account.tf and terragrunt.tf"
