@@ -17,7 +17,7 @@ cat << EOF > account.hcl
 locals {
   account_name = "${account_name}"
   account_id = ${account_id}
-  role_arn = "arn:aws:iam::${account_id}:role/TerraformAccessRole"
+  role_arn = "arn:aws:iam::${account_id}:role/test-datadog-role"
   region = "${region}"
   env = "${env}"
 }
