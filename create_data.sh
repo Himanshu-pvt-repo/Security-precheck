@@ -51,14 +51,14 @@ locals {
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite"
-  contents  = <<EOF
+  contents  = \<<EOF
 provider "aws" {
   assume_role {
     role_arn = "\${local.role_arn}"
   }
   region = "\${local.region}"
 }
-EOF
+\EOF
 }
 
 # Generate backend configuration for remote state
@@ -75,6 +75,6 @@ remote_state {
     if_exists = "overwrite"
   }
 }
-OUT_EOF
+EOF
 
 echo "Terraform backend configuration generated in account.tf and terragrunt.tf"
