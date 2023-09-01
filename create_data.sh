@@ -65,10 +65,10 @@ new_EOF
 remote_state {
   backend = "s3"
   config = {
-    bucket         = "now-platform-terraform-backend"
+    bucket         = "mbusa-remote-state"
     key            = "\${local.account_name}/\${path_relative_to_include()}/statefile.tfstate"
     region         = local.region
-    dynamodb_table = "now-platform-terraform-backend"
+    dynamodb_table = "mbusa-remote-state"
   }
   generate = {
     path      = "backend.tf"
