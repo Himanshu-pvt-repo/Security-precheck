@@ -38,7 +38,7 @@ inputs = {
 EOF
 
 
-cd .. && cat << OUT_EOF > terragrunt.hcl
+cd .. && cat << EOF > terragrunt.hcl
 locals {
   account_vars = read_terragrunt_config("account.hcl")
   account_name = local.account_vars.locals.account_name
@@ -51,14 +51,14 @@ locals {
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite"
-  contents  = \<<EOF
+  contents  = <<EOF
 provider "aws" {
   assume_role {
     role_arn = "\${local.role_arn}"
   }
   region = "\${local.region}"
 }
-\EOF
+REPLCE_EOF
 }
 
 # Generate backend configuration for remote state
