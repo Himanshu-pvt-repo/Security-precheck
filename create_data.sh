@@ -27,7 +27,7 @@ EOF
 
 cat << EOF > terragrunt.hcl
 terraform {
-  source = "/tmp/test/ride-platform-tf-modules/datadog_integration/module"  
+  source = "git@git.i.mercedes-benz.com:MBUSA/ride-platform-tf-modules.git//datadog_integration/module?ref=feature/CPET-1938-refactor-dd-integration"  
 }
 include {
   path = find_in_parent_folders()
