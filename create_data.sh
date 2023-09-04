@@ -7,6 +7,8 @@ env=$4
 datadog_api_key_name=$5
 enable_datadog_integration=$6
 datadog_host_tags=$7
+datadog_master_api_key=$8
+datadog_master_app_key=$9
 
 mkdir -p ${account_name}/${env}/datadog_integration
 cd ${account_name}/${env}/datadog_integration
@@ -34,7 +36,9 @@ inputs = {
     datadog_api_key_name = "$datadog_api_key_name"
     enable_datadog_integration = $enable_datadog_integration
     datadog_host_tags = $datadog_host_tags
-}
+    datadog_master_app_key = $datadog_master_app_key
+    datadog_master_api_key = $datadog_master_api_key
+ }
 EOF
 
 
