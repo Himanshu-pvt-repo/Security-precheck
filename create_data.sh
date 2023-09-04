@@ -36,8 +36,8 @@ inputs = {
     datadog_api_key_name = "$datadog_api_key_name"
     enable_datadog_integration = $enable_datadog_integration
     datadog_host_tags = $datadog_host_tags
-    datadog_master_app_key = $datadog_master_app_key
-    datadog_master_api_key = $datadog_master_api_key
+    datadog_master_app_key = "$datadog_master_app_key"
+    datadog_master_api_key = "$datadog_master_api_key"
  }
 EOF
 
