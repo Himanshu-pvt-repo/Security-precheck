@@ -18,7 +18,7 @@ cd ${account_name}/${env}/datadog_integration
 cat << EOF > account.hcl
 locals {
   account_name = "${account_name}"
-  account_id = ${account_id}
+  account_id = "${account_id}"
   role_arn = "arn:aws:iam::${account_id}:role/test-datadog-role"
   region = "${region}"
   env = "${env}"
@@ -36,8 +36,8 @@ inputs = {
     datadog_api_key_name = "$datadog_api_key_name"
     enable_datadog_integration = $enable_datadog_integration
     datadog_host_tags = $datadog_host_tags
-    datadog_master_app_key = "$datadog_master_app_key"
-    datadog_master_api_key = "$datadog_master_api_key"
+    datadog_app_key = "$datadog_master_app_key"
+    datadog_api_key = "$datadog_master_api_key"
  }
 EOF
 
