@@ -6,7 +6,7 @@ include {
 }
 inputs = {
     datadog_api_key_name = "skymet-key"
-    enable_datadog_integration = true
+    enable_datadog_integration = false
     datadog_host_tags = ["aws_account_name:example_account"]
     datadog_app_key = ""
     datadog_api_key = ""
