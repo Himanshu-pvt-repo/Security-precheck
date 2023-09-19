@@ -21,6 +21,6 @@ module "bulk_monitor" {
   providers = {
     datadog = datadog.datadog-provider
   }
-  source               = "../modules/bulk_monitor"
+  source               = "./modules/bulk_monitor"
   filepath             = "monitor.csv"
 }

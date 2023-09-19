@@ -1,0 +1,3 @@
+project,url,status_code,subject,email,message,env,priority,tags
+Google,https://www.google.com,200,Test-Uptime-Monitor-For-Google,"himanshu.yadav01@nagarro.com","test-for-google",Prod,2,"tag1:value1,tag2:value2"
+Dell,https://www.dell.com/en-in,200,Test-Uptime-Monitor-For-Dell,"himanshu.yadav01@nagarro.com","test-for-dell",Prod,2,"tag1:value1,tag2:value2"
