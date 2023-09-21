@@ -25,8 +25,11 @@ for_each = { for inst in local.data : inst.project => inst }
 ${each.value.message}.
 EOF
 
-  tags    = split(",", each.value.tags)
-  #tags = ["account_name:${each.value.project}","env:${each.value.env}","${each.value.tags}"]
+  #tags    = split(",", each.value.tags)
+  tags = concat(
+    [ "env:${each.value.env}" ],
+    split(",", each.value.tags)
+  )
   status = "live"
 
   request_definition {
