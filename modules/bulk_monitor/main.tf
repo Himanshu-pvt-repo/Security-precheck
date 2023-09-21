@@ -40,9 +40,20 @@ EOF
     target   = each.value.status_code
   }
 
+  assertion {
+    type     = "responseTime"
+    operator = "lessThan"
+    target   = each.value.latency_kpi
+  }
+
+
   locations = ["aws:us-east-1"]
   options_list {
-    tick_every          = 900
+    tick_every          = each.value.test_interval
+    retry {
+      count    = each.value.retry_attempts
+      interval = 300
+    }
     min_location_failed = 1
     monitor_priority = each.value.priority
     monitor_name     = "${each.value.project}/${each.value.env}/${each.value.subject}"
