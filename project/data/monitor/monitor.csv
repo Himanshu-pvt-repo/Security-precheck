@@ -1,3 +1,3 @@
-project,url,latency_kpi,status_code,test_interval,retry_attempts,subject,email,message,env,priority,tags
-Google,https://www.google.com,500,200,180,1,Test-Uptime-Monitor-For-Google,"himanshu.yadav01@gmail.com","test-for-google",Prod,2,"tag1:value1,tag2:value2,project:google"
-Dell,https://www.dell.com/en-in,500,200,180,1,Test-Uptime-Monitor-For-Dell,"himanshu.yadav01@gamil.com","test-for-dell",Prod,2,"tag1:value1,tag2:value2,project:dell"
+project,url,latency_kpi,status_code,test_interval,retry_attempts,locations,subject,email,message,env,priority,tags
+Google,https://www.google.com,500,200,180,1,"aws:eu-central-1,aws:us-east",Test-Uptime-Monitor-For-Google,"himanshu.yadav01@gmail.com","test-for-google",Prod,2,"tag1:value1,tag2:value2,project:google"
+Dell,https://www.dell.com/en-in,500,200,180,1,"aws:eu-central-1,aws:us-east",Test-Uptime-Monitor-For-Dell,"himanshu.yadav01@gamil.com","test-for-dell",Prod,2,"tag1:value1,tag2:value2,project:dell"
