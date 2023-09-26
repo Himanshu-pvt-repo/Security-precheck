@@ -50,7 +50,7 @@ EOF
   }
 
 
-  locations = ["aws:us-east-1"]
+  locations = split(",", each.value.locations)
   options_list {
     tick_every          = each.value.test_interval
     retry {
@@ -61,5 +61,4 @@ EOF
     monitor_priority = each.value.priority
     monitor_name     = "${each.value.project}/${each.value.env}/${each.value.subject}"
   }
-
 }
