@@ -327,7 +327,7 @@ then
   echo "##############################################################"
   echo "INSTALL/UPGRADE Datadog"
   echo "##############################################################"
-  kubectl create ns $NAMESPACE
+  kubectl get namespace | grep -q "^$NAMESPACE " || kubectl create namespace $NAMESPACE
   helm repo add datadog $CHART_REPOSITORY_URL
   helm repo update 
   helm upgrade --install $RELEASE_NAME $CHART_NAME -f $VALUES_FILE -n $NAMESPACE --set datadog.apiKey=$DATADOG_API
